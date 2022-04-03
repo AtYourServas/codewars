@@ -1,0 +1,4 @@
+//take in a string and reverse it
+function solution(str){
+    return str.split('').reverse().join('')
+  }
