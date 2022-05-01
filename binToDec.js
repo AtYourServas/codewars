@@ -13,3 +13,12 @@ function binToDec(bin){
 
   //Test
 console.log(binToDec('1001001'), 73)
+
+
+/* Alternative solution
+
+function binToDec(bin){
+  return parseInt(bin,2);
+}
+
+*/
