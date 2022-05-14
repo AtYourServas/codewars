@@ -11,9 +11,21 @@ The answer should be rounded to the nearest 2 decimal places. */
 //P: water (amount of water required for a load.... each article of clothes over the load requires 10% more water)
 //   load (minimum number of clothes, max is 2 * load
 //   clothes (actual number of clothes being washed)
-//R:  The amount of water required to run the load of laundry.  If clothes < load, return "Not enough clothes".  If clothes > 2 * load, return "Too much clothes"
+//R:  The amount of water required to run the load of laundry (rounded to 2 decimals).  If clothes < load, return "Not enough clothes".  If clothes > 2 * load, return "Too much clothes"
 //E:  howMuchWater(50,15,29), 189.87,'')
 //howMuchWater(10,10,21), 'Too much clothes',''
 //howMuchWater(10,10,2), 'Not enough clothes',''
 //howMuchWater(10,11,20), 23.58,''
-//P: conditional to check if load is too much or too little, otherwise calculate water with formula of 
+//P: conditional to check if load is too much or too little, otherwise calculate water with formula of water * 1.1 ** (clothes - load)
+
+function howMuchWater(water, load, clothes){
+    if (clothes > 2 * load) {
+        return "Too much clothes"
+    }
+    else if (clothes < load) {
+         return "Not enough clothes"
+    }
+    else {
+        return Number((water * (1.1 ** (clothes - load))).toFixed(2))
+    }
+   }
