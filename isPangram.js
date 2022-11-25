@@ -3,5 +3,5 @@
 Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation. */
 
 function isPangram(string){
-    return 'abcdefghijklmnopqrstuvwxyz'.split('').every( elem => string.indexOf(elem.toLowerCase()) > -1)
+    return 'abcdefghijklmnopqrstuvwxyz'.split('').every( elem => string.toLowerCase().indexOf(elem) > -1)
   }
